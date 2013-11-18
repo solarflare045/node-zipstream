@@ -172,7 +172,7 @@ ZipStream.prototype.addFile = function(source, file, callback) {
     deflate.on('end', onEnd);
 
     if (Buffer.isBuffer(source)) {
-      update(chunk);
+      update(source);
       deflate.write(source);
       deflate.end();
     } else {
